@@ -1,0 +1,6 @@
+G1 힙 레이아웃과 영역
+
+<heap size> / 2048
+
+
+Number or regions = <Heap size> / <region size>

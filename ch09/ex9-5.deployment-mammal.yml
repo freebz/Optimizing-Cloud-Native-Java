@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mammal-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mammal-service
+  template:
+    metadata:
+      labels:
+        app: mammal-service
+    spec:
+      containers:
+        - name: mammaldemo
+          image: mammal_demo
+          ports:
+            - containerPort: 8081

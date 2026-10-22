@@ -1,0 +1,25 @@
+{
+  "name": "/v1/app/foo",
+  "context": {
+    "trace_id": "kDMI7LTxTj220awNARJw==",
+    "span_id": "9ir6veJ4Hdw="
+  },
+  "parent_id": "",
+  "kind": 1,
+  "start_time": "2021-10-22 16:04:01.209458162 +0000 UTC",
+  "end_time": "2021-10-22 16:04:01.209514132 +0000 UTC",
+  "status_code": "STATUS_CODE_OK",
+  "status_message": "",
+  "attributes": {
+    "key": "attr",
+    "string.value": "value2"
+    // ... HTTP와 전송 세부 정보 생략됨
+  },
+  "events": [
+    {
+      "name": "",
+      "message": "OK",
+      "timestamp": "2021-10-22 16:04:01.209512872 +0000 UTC"
+    }
+  ]
+}

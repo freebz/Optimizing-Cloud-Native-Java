@@ -1,0 +1,3 @@
+animal-service_1    | 2024-01-14T08:27:31.748Z  INFO 1 --- @trics-publisher]
+i.m.c.i.logging.LoggingMeterRegistry     : attacker.win.size{}
+throughput=0.183333/s mean=0.699785 max=0.98829

@@ -1,0 +1,21 @@
+# 예거
+# 로컬 GRPC 포트(4317)는 오픈텔레메트리 컬렉터의 GRPC 포트와 충돌을 피하기 위해 14317로 다시 매핑되어야 함.
+jaeger-all-in-one:
+  image: jaegertracing/all-in-one:1.52.0
+  ports:
+    - "16686:16686"
+    - "14317:4317"  # 오픈텔레메트리 프로토콜 gRPC 수신기
+    - "4318:4318"   # 오픈텔레메트리 프로토콜 HTTP 수신기
+
+# Collector
+otel-collector:
+  image: otel/opentelemetry-collector:0.91.0
+  command: ["--config=/etc/otel-collector-config.yaml"]
+  volumes:
+    - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+  ports:
+    - "13133:13133" # Health_check 익스텐션
+    - "4317:4317"   # 오픈텔레메트리 프로토콜 gRPC 수신기
+    - "55681:55681" # 오픈텔레메트리 프로토콜 HTTP 수신기 대체 포트
+  depends_on:
+    - jaeger-all-in-one

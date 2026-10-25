@@ -1,0 +1,12 @@
+# 프로메테우스
+prom:
+  container_name: prometheus
+  image: prom/prometheus
+  command:
+    - "--config.file=/config/prometheus.yml"
+  ports:
+    - "9090:9090"
+  user: root
+  volumes:
+    - './config:/config'
+    - './target/data/prometheus:/prometheus'

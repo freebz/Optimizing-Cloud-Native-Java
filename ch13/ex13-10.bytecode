@@ -1,0 +1,10 @@
+21: ldc           #8  // b 문자열
+23: astore_1      4
+25: aload_3
+26: aload         4
+28: invokevirtual #9. // 메서드 java/lang/invoke/MethodHandle.invoke
+                      // :(Ljava/lang/String;)I
+31: istore        5
+33: getstatic     #10 // 필드 java/lang/System.out:Ljava/io/PrintStream;
+36: iload         5
+38: invokevirtual #11 // 메서드 java/io/PrintStream.println:(I)V

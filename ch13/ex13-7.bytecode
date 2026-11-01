@@ -1,0 +1,14 @@
+17: iconst_0
+18: new           #2  //  클래스 java/lang/Object
+21: dup
+22: invokespecial #1  // 메서드 java/lang/Object."<init>":()V
+25: aastore
+26: dup
+27: iconst_1
+28: new           #2  // 클래스 java/lang/Object
+31: dup
+32: invokespecial #1  // 메서드 java/lang/Object."<init>":()V
+35: aastore
+36: invokevirtual #3. // 메서드 java/lang/reflect/Method.invoke
+                      // :(Ljava/Object;[Ljava/lang/Object;])
+                      // Ljava/lang/Object;

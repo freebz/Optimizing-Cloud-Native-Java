@@ -1,0 +1,1 @@
+while (!canProceed()) { ... LockSupport.park(this); }

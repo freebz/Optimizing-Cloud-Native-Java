@@ -1,0 +1,15 @@
+0: getstatic      #2 // 필드 java/lang/Integer.TYPE:Ljava/lang/Class;
+3: invokestatic   #3 // 메서드 java/lang/invoke/MethodType.methodType;
+                     // (Ljava/lang/class;)Ljava/lang/invoke/MethodType;
+6: astore_1
+7: invokestatic   #4 // 메서드 java/lang/invoke/MethodHandles.lookup
+                     // ()Ljava/lang/invoke/MethodHandles$Lookup;
+10: astore_2
+11: aload_2
+12: ldc           #5 // 클래스 java/lang/String
+14: ldc           #6 // 문자열 해시코드
+16: aload_1
+17: invokeivrtual #7 // 메서드 java/lang/invoke/MethodHandles$Lookup.findVirtual:
+                     // (Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/
+                     // MethodType;)Ljava/lang/invoke/MethodHandle;1
+20: astore_3

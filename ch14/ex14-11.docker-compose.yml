@@ -1,0 +1,9 @@
+# Hospital
+hospital-service:
+  image: hospital_demo: latest
+  ports:
+    - "8000:8000"
+  depends_on:
+    - kafka-1
+    - kafka-2
+    - kafka-3

@@ -1,0 +1,10 @@
+# Kafka
+kafka-1:
+  image: debezium/kafka:2.7.0.Final
+  ports:
+    - "19092:9092"
+    - "19093:9093"
+  environment:
+    - CLUSTER_ID=g4xWbaRgd-b-zQYgIS1rY5
+    - MODE_ID=1
+    - KAFKA_CONTROLLER_QUORUM_VOTERS=1@kafka-1:9093,2@kafka-2:3@kafka-3:9093

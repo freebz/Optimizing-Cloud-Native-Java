@@ -1,0 +1,1 @@
+enum SecurityLevel { USER, ADMIN }

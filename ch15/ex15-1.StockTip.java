@@ -1,0 +1,1 @@
+record StockTip(String symbol, double sentiment, double delta24) {}
